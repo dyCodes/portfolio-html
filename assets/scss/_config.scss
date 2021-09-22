@@ -1,0 +1,15 @@
+// COLORS
+$mainColor: #1e32eb;
+$textColor: #555;
+
+// MEDIA QUERIES
+@mixin mobile {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
