@@ -1,15 +1,58 @@
-// COLORS
-$mainColor: #1e32eb;
-$textColor: #555;
+// Variables
+$primaryColor: #f9d342;
+$mainColor: #c59e00;
+$black: #111;
+$boxShadow: 0 0 20px -5px rgba(0, 0, 0, 0.2);
+
+// MIXINS
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex_sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+@mixin text_overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
 
 // MEDIA QUERIES
 @mixin mobile {
-	@media (max-width: 768px) {
-		@content;
-	}
+  @media (max-width: 768px) {
+    @content;
+  }
 }
 @mixin tablet {
-	@media (min-width: 768px) {
-		@content;
-	}
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+// RESPONSIVE CLASS
+@mixin large_screen {
+  @media (max-width: 991px) {
+    display: none !important;
+  }
+}
+@mixin small_screen {
+  @media (min-width: 992px) {
+    display: none !important;
+  }
 }

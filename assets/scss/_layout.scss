@@ -1,6 +1,67 @@
-/*!----- HEADER -------*/
+/******* LAYOUT CSS *******/
+
+// HEADER
 header {
+  .navbar {
+    width: 100%;
+    position: absolute;
+    padding-top: 1.56rem;
+    padding-bottom: 1.56rem;
+    transition: 0.2s;
+  }
+  .navbar .logo {
+    max-width: 46px;
+  }
+  .navbar .navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 35px;
+    color: #fff;
+    padding-right: 0;
+  }
+  .navbar .navbar-collapse {
+    a.nav_link {
+      color: #eee;
+      font-weight: 400;
+      padding: 6px;
+      margin-left: 18px;
+      letter-spacing: 0.2px;
+    }
+    a.nav_link:hover {
+      color: #0a58ca;
+    }
+    a.nav_link.active {
+      color: #0a58ca;
+      font-weight: bold;
+    }
+  }
 }
-/*!----- FOOTER -------*/
+
+// FOOTER
 footer {
+  color: #fff;
+  padding: 15px;
+  background: #111;
+}
+
+/* Responsize CSS */
+@media (max-width: 991px) {
+  header .navbar .navbar-collapse ul {
+    background: #fff;
+  }
+  header .navbar .navbar-collapse ul a.nav_link {
+    color: #222;
+    display: block;
+    padding: 14px;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  header .navbar .navbar-collapse ul li:last-of-type a {
+    border: none;
+  }
+}
+
+@include tablet {
+}
+@include pc {
 }

@@ -1,3 +1,179 @@
-@import './config';
-@import './base';
-@import './layout';
+@import "./config";
+@import "./base";
+@import "./layout";
+
+// PRELOADER
+#preloader {
+  display: grid;
+  place-content: center;
+  z-index: 500;
+  transition: 1s;
+
+  h2 {
+    position: relative;
+    padding: 0;
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: $black;
+    -webkit-text-stroke: 1px #444;
+  }
+  h2::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 0;
+    -webkit-text-stroke: 1px #fff;
+    border-right: 2px solid #fff;
+    overflow: hidden;
+    animation: _preloader 3s 0.5s forwards;
+  }
+  @keyframes _preloader {
+    0% {
+      width: 0;
+    }
+    90% {
+      width: 100%;
+      color: #fff;
+      -webkit-text-stroke: 1px #fff;
+      border-right: 2px solid #fff;
+    }
+    100% {
+      width: 100%;
+      color: $black;
+      -webkit-text-stroke: 1px $black;
+      border-right: 2px solid $black;
+    }
+  }
+  &.hide {
+    opacity: 0;
+    top: -100vh !important;
+  }
+}
+
+.hero {
+  color: #fff;
+  padding: 80px 0 20px;
+  height: 100vh;
+  max-height: 740px;
+  background: rgb(8, 11, 19);
+}
+
+section {
+  padding: 58px 5px 78px;
+
+  .section_heading {
+    text-align: center;
+    margin-bottom: 35px;
+
+    .title_ {
+      color: $mainColor;
+      font-size: 16px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 60px;
+        height: 2px;
+        position: absolute;
+        background: $mainColor;
+        bottom: -14px;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+    .heading_sub {
+      line-height: 32px;
+      margin-top: -10px;
+      font-weight: 500;
+      padding: 10px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+#portfolio {
+  padding: 85px 6px 98px;
+
+  .card {
+    img {
+      height: 280px;
+      object-fit: cover;
+    }
+    .project_link {
+      text-decoration: underline;
+    }
+  }
+}
+
+#contact {
+  padding: 50px 15px;
+
+  .container {
+    position: relative;
+    padding: 0;
+
+    h2 {
+      padding-bottom: 18px;
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 60px;
+        height: 2px;
+        position: absolute;
+        background: $primaryColor;
+        bottom: 5px;
+        left: 0;
+        margin: auto;
+      }
+    }
+    // CONTACT INFO
+    .contactInfo {
+      color: #fff;
+      padding: 20px;
+      position: relative;
+      background: $black;
+      min-height: 500px;
+      h2 {
+        color: #eee;
+        position: relative;
+      }
+
+      .info {
+        margin-top: 30px;
+
+        li {
+          padding: 15px 0;
+          .icon {
+            display: grid;
+            place-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            margin-right: 15px;
+            background: $primaryColor;
+            color: #000;
+            .bi {
+              font-size: 20px;
+            }
+          }
+          p {
+            font-size: 17px;
+            font-weight: 300;
+          }
+        }
+      }
+      .social_media {
+        max-width: 250px;
+        position: absolute;
+        bottom: 10%;
+        a:first-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
