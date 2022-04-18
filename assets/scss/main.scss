@@ -52,10 +52,25 @@
 
 .hero {
   color: #fff;
-  padding: 80px 0 20px;
-  height: 100vh;
-  max-height: 740px;
-  background: rgb(8, 11, 19);
+  padding: 70px 0 30px;
+  min-height: 100vh;
+  // max-height: 740px;
+  background: rgb(7, 10, 19);
+
+  ._sub_heading {
+    color: $mainColor;
+    font-size: 22px;
+  }
+  .desc_text {
+    padding: 6px 0;
+    color: rgba(255, 255, 255, 0.72);
+  }
+  .cta .btn {
+    padding: 10px 35px;
+    border-radius: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 }
 
 section {
@@ -176,4 +191,8 @@ section {
       }
     }
   }
+}
+
+// Responsive
+@include tablet {
 }

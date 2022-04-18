@@ -1,6 +1,6 @@
 // Variables
 $primaryColor: #f9d342;
-$mainColor: #c59e00;
+$mainColor: #c5a111;
 $black: #111;
 $boxShadow: 0 0 20px -5px rgba(0, 0, 0, 0.2);
 
@@ -19,13 +19,6 @@ $boxShadow: 0 0 20px -5px rgba(0, 0, 0, 0.2);
   display: grid;
   align-items: center;
   justify-content: center;
-}
-@mixin text_overlay {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: grid;
 }
 
 // MEDIA QUERIES

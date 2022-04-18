@@ -2,11 +2,11 @@
 
 // HEADER
 header {
+  width: 100%;
+  position: absolute;
+  padding: 6px;
+
   .navbar {
-    width: 100%;
-    position: absolute;
-    padding-top: 1.56rem;
-    padding-bottom: 1.56rem;
     transition: 0.2s;
   }
   .navbar .logo {
@@ -40,8 +40,19 @@ header {
 // FOOTER
 footer {
   color: #fff;
-  padding: 15px;
+  padding: 12px;
   background: #111;
+
+  .backToTop {
+    display: block;
+    color: #fff;
+    font-size: 38px;
+    cursor: pointer;
+    padding: 12px;
+  }
+  .contact_info {
+    color: rgba(255, 255, 255, 0.75);
+  }
 }
 
 /* Responsize CSS */
