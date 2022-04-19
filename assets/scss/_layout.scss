@@ -10,7 +10,7 @@ header {
     transition: 0.2s;
   }
   .navbar .logo {
-    max-width: 46px;
+    width: 64px;
   }
   .navbar .navbar-toggler {
     border: none !important;
@@ -25,14 +25,15 @@ header {
       font-weight: 400;
       padding: 6px;
       margin-left: 18px;
+      font-size: 17px;
       letter-spacing: 0.2px;
     }
     a.nav_link:hover {
-      color: #0a58ca;
+      color: $mainColor;
     }
     a.nav_link.active {
-      color: #0a58ca;
-      font-weight: bold;
+      color: $mainColor;
+      // font-weight: bold;
     }
   }
 }
@@ -41,7 +42,7 @@ header {
 footer {
   color: #fff;
   padding: 12px;
-  background: #111;
+  background: rgb(12, 13, 15);
 
   .backToTop {
     display: block;
@@ -49,8 +50,10 @@ footer {
     font-size: 38px;
     cursor: pointer;
     padding: 12px;
+    position: relative;
+    top: -30px;
   }
-  .contact_info {
+  .contact_info p {
     color: rgba(255, 255, 255, 0.75);
   }
 }
@@ -70,9 +73,4 @@ footer {
   header .navbar .navbar-collapse ul li:last-of-type a {
     border: none;
   }
-}
-
-@include tablet {
-}
-@include pc {
 }
