@@ -27,6 +27,7 @@ header {
       margin-left: 18px;
       font-size: 17px;
       letter-spacing: 0.2px;
+      text-decoration: none;
     }
     a.nav_link:hover {
       color: $mainColor;
@@ -63,7 +64,7 @@ footer {
 }
 
 /* Responsize CSS */
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   header .navbar .navbar-collapse ul {
     background: #fff;
   }

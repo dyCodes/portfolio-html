@@ -8,15 +8,6 @@
   min-height: 58vh;
   background: rgb(14, 16, 20);
 
-  .hero_image {
-    img {
-      transition: 1.2s;
-    }
-    // &:hover img {
-    //   transform: scale(1.03);
-    // }
-  }
-
   ._heading {
     font-size: calc(1.42rem + 2.1vw);
     font-weight: 600;
@@ -28,7 +19,7 @@
   }
   .desc_text {
     padding: 6px 0;
-    font-size: 1.08rem;
+    font-size: 1.05rem;
     color: rgba(255, 255, 255, 0.72);
   }
   .cta .btn {
@@ -116,5 +107,11 @@ section {
   #portfolio .card-body {
     padding-left: 8px;
     padding-right: 8px;
+  }
+}
+@include pc {
+  #hero {
+    height: 100vh;
+    max-height: 840px;
   }
 }
