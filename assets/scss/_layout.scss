@@ -41,20 +41,24 @@ header {
 // FOOTER
 footer {
   color: #fff;
-  padding: 12px;
+  padding: 48px 12px;
   background: rgb(12, 13, 15);
 
   .backToTop {
-    display: block;
+    display: inline-block;
     color: #fff;
     font-size: 38px;
     cursor: pointer;
     padding: 12px;
     position: relative;
-    top: -30px;
+    top: -28px;
   }
   .contact_info p {
     color: rgba(255, 255, 255, 0.75);
+  }
+  .contact_info a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: underline;
   }
 }
 
